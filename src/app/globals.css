@@ -1,0 +1,99 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 43, 48, 59; /* Dark blue */
+    --background-end-rgb: 47, 54, 90; /* Lighter blue */
+  }
+}
+
+body {
+  display: inline;
+  position: relative;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+  appearance: none; /* Added appearance property */
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type='submit'] {
+  background-color: #1a202c;
+}
+
+button[type='button'] {
+  background-color: #6b7280;
+}
+.triangle {
+
+}
+
+.triangle::before {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0em;
+  border: 1em solid transparent;
+  border-left-color: #ffffff;
+}
