@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios({
-      url: "http://localhost:8001/auth/login",
+      url: "http://159.89.203.190:1000/api/user/login",
       method: "POST",
       headers: {},
       data: {
@@ -24,12 +24,12 @@ const Login = () => {
     })
       .then((res) => {
         console.log("Connected to pollweb 2023");
-        login(res.data.token); // call the login function from AuthContext
+        login(res.data.token);
         router.push("/");
         console.log(res);
       })
       .catch((err) => {
-        setErrorMessage("Login failed. Please check email or password"); // Set error message
+        setErrorMessage("Login failed. Please check email or password");
         console.log(err);
       });
 

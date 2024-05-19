@@ -56,20 +56,19 @@ const Header = () => {
               />
             </div>
           </li>
-          <li>
-            <Link href="/poll_create">Create poll</Link>
-          </li>
           {isLoggedIn ? (
-            <li>
-              <button className='logout-button' onClick={() => logout()}>Logout</button>
-            </li>
+            <>
+              <li>
+                <button className='logout-button' onClick={() => logout()}>Logout</button>
+              </li>
+            </>
           ) : (
             <>
               <li>
-                <Link href="/login">Login</Link>
+                <Link href="/login">Нэвтрэх</Link>
               </li>
               <li>
-                <Link href="/register">Register</Link>
+                <Link href="/register">Бүртгүүлэх</Link>
               </li>
             </>
           )}

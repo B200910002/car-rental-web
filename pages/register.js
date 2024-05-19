@@ -4,12 +4,12 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 
 const Register = () => {
-  const [username, setUsername] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [birthdate, setBirthdate] = useState('');
   const [darkMode, setDarkMode] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(''); // State variable for error message
+  const [errorMessage, setErrorMessage] = useState('');
 
   const router = useRouter();
 
@@ -17,14 +17,14 @@ const Register = () => {
     e.preventDefault();
 
     axios({
-      url: 'http://localhost:8001/user/createUser',
+      url: 'http://159.89.203.190:1000/api/user/register',
       method: 'POST',
       headers: {},
       data: {
+        first_name: firstName,
+        last_name: lastName,
         email: email,
-        username: username,
         password: password,
-        birthdate: birthdate,
       },
     })
       .then((res) => {
@@ -37,16 +37,16 @@ const Register = () => {
       });
 
     console.log('Registration submitted:', {
+      firstName,
+      lastName,
       email,
-      username,
       password,
-      birthdate,
     });
 
+    setFirstName('');
+    setLastName('');
     setEmail('');
-    setUsername('');
     setPassword('');
-    setBirthdate('');
   };
 
   useEffect(() => {
@@ -64,10 +64,28 @@ const Register = () => {
   return (
     <div className="card">
       <Header />
-      <h1>Register</h1>
+      <h1 className='text-xl font-bold'>Бүртгүүлэх</h1>
       <form onSubmit={handleRegister}>
         <label>
-          Email:
+          Овог:
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Нэр:
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          И-майл:
           <input
             type="email"
             value={email}
@@ -76,16 +94,7 @@ const Register = () => {
           />
         </label>
         <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password:
+          Нууц үг:
           <input
             type="password"
             value={password}
@@ -93,16 +102,7 @@ const Register = () => {
             required
           />
         </label>
-        <label>
-          Birthdate:
-          <input
-            type="date"
-            value={birthdate}
-            onChange={(e) => setBirthdate(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Register</button>
+        <button type="submit">Бүртгүүлэх</button>
       </form>
     </div>
   );

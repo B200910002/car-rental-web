@@ -5,6 +5,8 @@ import './footerStyles.css';
 import './footerStyles.css';
 
 const Footer = () => {
+  const now = new Date();
+  
   return (
     <footer>
       {/* <div className="social-links">
@@ -12,7 +14,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTwitter} />
         </a>
       </div> */}
-      <p>&copy; 2023 Car Rental Website. All rights reserved.</p>
+      <p>&copy; {now.getFullYear()} Car Rental Website. All rights reserved.</p>
     </footer>
   );
 };
