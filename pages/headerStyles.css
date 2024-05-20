@@ -127,9 +127,9 @@ nav ul li a:hover {
 /* declaring the css variables colors */
 :root {
   --color-primary-accent: #2614c7;
-  --color-primary: #868484;
+  --color-primary: #252525;
   --color-button: #3d486c;
-  --color-border: #868484;
+  --color-border: #252525;
   --color-paragraph: #797979;
   --color-button-text: rgb(255, 255, 255);
   --color-background: #e7e7e7;

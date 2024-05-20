@@ -97,8 +97,8 @@ const Page = () => {
                 </div>
                 <div className='flex items-center'>
                   {/* <button type="submit"
-                    onClick={() => window.location.href = `/booking/${poll.id}`}
-                  > */}
+                  onClick={() => window.location.href = `/booking/${poll.id}`}
+                > */}
                   {/* Захиалах */}
                   {/* </button> */}
                   <Link href={`/booking/${poll.id}`} passHref className="bg-appColor hover:bg-appColor-dark text-white rounded sm:py-1 sm:px-3">

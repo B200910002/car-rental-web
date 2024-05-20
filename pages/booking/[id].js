@@ -86,7 +86,7 @@ const Booking = () => {
     poll ?
       <div className="container">
         <Header />
-        <h1 className="text-3xl font-bold mb-4">Poll Details</h1>
+        <h1 className="text-3xl font-bold mb-4">Захиалга өгөх</h1>
         <form onSubmit={handleAnswerSubmit}>
           <div className='flex justify-between'>
             <div className="">
@@ -119,7 +119,7 @@ const Booking = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleViewResults}
           >
-            View results
+            Захиалах
           </button>
         </form>
         <div className="comment-container">

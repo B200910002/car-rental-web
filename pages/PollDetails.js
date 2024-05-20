@@ -83,7 +83,7 @@ const PollDetail = ({ pollid }) => {
   return (
     <div className="container">
       <Header/>
-      <h1 className="text-3xl font-bold mb-4">Poll Details</h1>
+      <h1 className="text-3xl font-bold mb-4">Захиалга өгөх</h1>
 
       <h2 className="text-xl font-bold mb-2 poll-question">{poll.question}</h2>
 
@@ -119,7 +119,7 @@ const PollDetail = ({ pollid }) => {
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={handleViewResults}
         >
-          View results
+          Захиалах
         </button>
       </form>
 <div className="comment-container">
