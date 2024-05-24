@@ -4,7 +4,7 @@ import './headerStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../src/app/AuthContext';
 
 const Header = () => {
 

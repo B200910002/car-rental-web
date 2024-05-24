@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
-import SearchBar from './SearchBar';
-import DropdownSort from './DropdownSort';
-import CalendarComponent from './Calendar';
+import SearchBar from '../src/app/component/SearchBar';
+import DropdownSort from '../src/app/component/DropdownSort';
+import CalendarComponent from '../src/app/component/Calendar';
 import axios from 'axios';
-import BaseLayout from './component/BaseLayout';
+import BaseLayout from '../src/app/component/BaseLayout';
 
 const Dashboard = () => {
 

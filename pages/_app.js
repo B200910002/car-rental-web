@@ -1,7 +1,7 @@
 import '../src/app/custom-styles.css';
 import { Inter } from 'next/font/google';
-import { AuthProvider } from './AuthContext'; // Update import statement
-import { SidebarProvider } from './context/SidebarContext';
+import { AuthProvider } from '../src/app/AuthContext'; // Update import statement
+import { SidebarProvider } from '../src/app/context/SidebarContext';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../Header';
-import { AuthContext } from '../AuthContext';
+import { AuthContext } from '../../src/app/AuthContext';
 import axios from 'axios';
 //anything
 const Booking = () => {

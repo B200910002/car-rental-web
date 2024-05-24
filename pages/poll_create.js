@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Header from './Header';
 import axios from 'axios';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../src/app/AuthContext';
 
 const AddPoll = () => {
   const { user, setUser } = useContext(AuthContext);
