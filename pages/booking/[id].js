@@ -100,7 +100,7 @@ const Booking = () => {
               <div>1 өдрийн {poll.price_per_day} ₮</div>
               <div>Өдөрт {poll.kilometer_per_Day} км явах</div>
               <div>1 км хэтрэх тутамд {poll.price_exceed_per_kilometer} ₮</div>
-              <div>НИЙТ ДҮН {poll.year.substring(0, 4)} ₮</div>
+              <div>НИЙТ ДҮН {poll.price_per_day} ₮</div>
               <div></div>
             </div>
           </div>
@@ -114,16 +114,22 @@ const Booking = () => {
             </button>
           )}
 
-          <button
-            type="button"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleViewResults}
-          >
-            Захиалах
-          </button>
+          <div className="flex item-center bg-gray-200 rounded-lg overflow-hidden">
+            <img src={poll.image} alt={`Image ${poll.id}`} className="w-full h-full object-cover" />
+          </div>
+
+          <div className='flex justify-end mt-2'>
+            <button
+              type="button"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={handleViewResults}
+            >
+              Захиалах
+            </button>
+          </div>
         </form>
-        <div className="comment-container">
-          <form onSubmit={handleCommentSubmit} className="comment-form">
+        {/* <div className="comment-container"> */}
+        {/* <form onSubmit={handleCommentSubmit} className="comment-form">
             <div className="mb-4">
               <label htmlFor="comment">Write comment</label>
               <textarea
@@ -142,21 +148,21 @@ const Booking = () => {
             >
               Add Comment
             </button>
-          </form>
+          </form> */}
 
-          <div className="comment-list">
-            <h3 className="text-lg font-bold mb-2">Comments:</h3>
-            {comments.map((comment, index) => (
-              <div key={index} className="mb-4 comment-item">
-                <div className="username font-bold">{comment.username}</div>
-                <div>{comment.comment}</div>
-                <div>{comment.createdAt}</div>
-                <div className="datetime-posted text-sm text-gray-500">{comment.datetime_posted}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+        {/* <div className="comment-list">
+          <h3 className="text-lg font-bold mb-2">Comments:</h3>
+          {comments.map((comment, index) => (
+            <div key={index} className="mb-4 comment-item">
+              <div className="username font-bold">{comment.username}</div>
+              <div>{comment.comment}</div>
+              <div>{comment.createdAt}</div>
+              <div className="datetime-posted text-sm text-gray-500">{comment.datetime_posted}</div>
+            </div>
+          ))}
+        </div> */}
+        {/* </div> */}
+      </div >
       : "loading..."
   );
 
