@@ -1,12 +1,14 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext,  } from 'react';
 import Link from 'next/link';
 import './headerStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from '../src/app/AuthContext';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter();
 
   const [darkTheme, setDarkTheme] = useState(false);
 
@@ -59,7 +61,12 @@ const Header = () => {
           {isLoggedIn ? (
             <>
               <li>
-                <button className='logout-button' onClick={() => logout()}>Logout</button>
+                <button className='logout-button' onClick={() => {
+                  router.push('/dashboard');
+                }}>Хянах самбар</button>
+              </li>
+              <li>
+                <button className='logout-button' onClick={() => logout()}>Гарах</button>
               </li>
             </>
           ) : (

@@ -26,8 +26,8 @@ body {
     )
     rgb(var(--background-start-rgb));
   display: flex;
-  align-items: center; /* Center align the content vertically */
-  justify-content: center; /* Center align the content horizontally */
+  align-items: center;
+  justify-content: center;
   min-height: 100vh; /* Set a minimum height for the body */
   padding: 1rem;
   transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -319,6 +319,23 @@ button:focus {
   gap: 5.5rem; /* Adjust the value to increase or decrease the spacing between the charts */
 }
 /* poll feed styling */
+
+.home {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 1rem;
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
 .poll-list {
   display: grid;
@@ -625,7 +642,7 @@ button:focus {
 .sidebar {
   width: 17rem;
   height: 100%;
-  background-color: var(--color-bg);
+  background-color: var(--background-start-rgb);
   padding: 1rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
   overflow: hidden;

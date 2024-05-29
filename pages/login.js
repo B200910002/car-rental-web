@@ -24,7 +24,7 @@ const Login = () => {
     })
       .then((res) => {
         console.log("Connected to pollweb 2023");
-        login(res.data.token);
+        login(res.data.data.token);
         router.push("/");
         console.log(res);
       })
@@ -41,10 +41,10 @@ const Login = () => {
   return (
     <div className="card">
       <Header />
-      <h1>Login</h1>
+      <h1>Нэвтрэх</h1>
       <form onSubmit={handleLogin}>
         <label>
-          Email:
+          И-мэйл:
           <input
             type="email"
             value={email}
@@ -53,7 +53,7 @@ const Login = () => {
           />
         </label>
         <label>
-          Password:
+          Нууц үг:
           <input
             type="password"
             value={password}

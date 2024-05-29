@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider> {/* Wrap the component with AuthProvider */}
-      {/* <SidebarProvider> */}
+      <SidebarProvider>
         <Component {...pageProps} />
-      {/* </SidebarProvider> */}
+      </SidebarProvider>
     </AuthProvider>
   );
 }

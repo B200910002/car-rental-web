@@ -1,7 +1,7 @@
 // components/Sidebar.js
 import Image from "next/image";
 import { AiFillAccountBook, AiOutlineHome } from "react-icons/ai";
-import { BsNewspaper, BsCash } from "react-icons/bs";
+import { BsClockHistory, BsNewspaper, BsCash, BsFillCarFrontFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
@@ -11,28 +11,28 @@ import { useRouter } from "next/router";
 
 const sidebarItems = [
   {
-    name: "Үндсэн хэсэг",
+    name: "Хянах  самбар",
     href: "/dashboard",
     icon: AiOutlineHome,
     onClick: (router) => router.push("/dashboard"),
   },
   {
-    name: "Төлбөрийн мэдээлэл",
-    href: "/payment-info",
-    icon: BsCash,
-    onClick: (router) => router.push("/payment-info"),
+    name: "Миний машинууд",
+    href: "/my-vehicles",
+    icon: BsFillCarFrontFill,
+    onClick: (router) => router.push("/my-vehicle"),
   },
   {
-    name: "Заалт илгээх",
-    href: "/send-report",
-    icon: AiFillAccountBook,
-    onClick: (router) => router.push("/send-report"),
-  },
-  {
-    name: "Мэдээ мэдээлэл",
-    href: "/news",
+    name: "Түрээсийн гэрээ",
+    href: "/contracts",
     icon: BsNewspaper,
-    onClick: (router) => router.push("/news"),
+    onClick: (router) => router.push("/contract"),
+  },
+  {
+    name: "Түүх",
+    href: "/history",
+    icon: BsClockHistory,
+    onClick: (router) => router.push("/history"),
   },
   {
     name: "Хувийн мэдээлэл",

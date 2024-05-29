@@ -17,7 +17,7 @@ const SearchBar = () => {
     <form onSubmit={handleSearch}>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Хайх..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
